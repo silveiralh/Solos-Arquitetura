@@ -17,6 +17,8 @@ public class Resultado {
     private double magnesio;
     private double enxofre;
     private double aluminio;
+    private double hidrogenio_aluminio;
+    private double MO;
     
     // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
 
@@ -75,13 +77,25 @@ public class Resultado {
     public void setAluminio(double aluminio) {
         this.aluminio = aluminio;
     }
+    
+     public double getHidrogenio_aluminio() {
+        return hidrogenio_aluminio;
+    }
+
+    public void setHidrogenio_aluminio(double hidrogenio_aluminio) {
+        this.hidrogenio_aluminio = hidrogenio_aluminio;
+    }
+    
+    public double getMO() {
+        return MO;
+    }
+
+    public void setMO(double MO) {
+        this.MO = MO;
+    }
     //</editor-fold>
     
     // <editor-fold defaultstate="collapsed" desc=" Funções para cálculo de valores ideais  ">
-    
-    public double calculoScmol(){
-        return 0.0;
-    }
     
     public double fosforoIdeal(int textura_solo){
         if(textura_solo ==1){
@@ -133,6 +147,25 @@ public class Resultado {
         }
     }
     
+    public double calculoScmol(){
+        return (this.potassio +this.calcio+this.magnesio);
+    }
+    
+    public double calculoCTCmol(){
+        return (calculoScmol()+this.hidrogenio_aluminio);
+    }
+    
+    public double calculoVAtual(){
+        return(100*(calculoScmol()/calculoCTCmol()));
+    }
+    
+    public double calculoTeorMO(){
+        return(this.MO/10);
+    }
+    
+    public double calculoCarbono(){
+        return(calculoTeorMO()/(1.72*10));
+    }
     
     //</editor-fold>
 }
