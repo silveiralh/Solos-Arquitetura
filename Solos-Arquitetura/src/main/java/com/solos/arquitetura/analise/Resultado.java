@@ -11,12 +11,12 @@ package com.solos.arquitetura.analise;
  */
 public class Resultado {
     private int numero_analise;
-    private float fosforo;
-    private float potassio;
-    private float calcio;
-    private float magnesio;
-    private float enxofre;
-    private float aluminio;
+    private double fosforo;
+    private double potassio;
+    private double calcio;
+    private double magnesio;
+    private double enxofre;
+    private double aluminio;
     
     // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
 
@@ -28,52 +28,111 @@ public class Resultado {
         this.numero_analise = numero_analise;
     }
 
-    public float getFosforo() {
+    public double getFosforo() {
         return fosforo;
     }
 
-    public void setFosforo(float fosforo) {
+    public void setFosforo(double fosforo) {
         this.fosforo = fosforo;
     }
 
-    public float getPotassio() {
+    public double getPotassio() {
         return potassio;
     }
 
-    public void setPotassio(float potassio) {
+    public void setPotassio(double potassio) {
         this.potassio = potassio;
     }
 
-    public float getCalcio() {
+    public double getCalcio() {
         return calcio;
     }
 
-    public void setCalcio(float calcio) {
+    public void setCalcio(double calcio) {
         this.calcio = calcio;
     }
 
-    public float getMagnesio() {
+    public double getMagnesio() {
         return magnesio;
     }
 
-    public void setMagnesio(float magnesio) {
+    public void setMagnesio(double magnesio) {
         this.magnesio = magnesio;
     }
 
-    public float getEnxofre() {
+    public double getEnxofre() {
         return enxofre;
     }
 
-    public void setEnxofre(float enxofre) {
+    public void setEnxofre(double enxofre) {
         this.enxofre = enxofre;
     }
 
-    public float getAluminio() {
+    public double getAluminio() {
         return aluminio;
     }
 
-    public void setAluminio(float aluminio) {
+    public void setAluminio(double aluminio) {
         this.aluminio = aluminio;
     }
+    //</editor-fold>
+    
+    // <editor-fold defaultstate="collapsed" desc=" Funções para cálculo de valores ideais  ">
+    
+    public double calculoScmol(){
+        return 0.0;
+    }
+    
+    public double fosforoIdeal(int textura_solo){
+        if(textura_solo ==1){
+            return 9.0;
+        }else if(textura_solo==2){
+            return 12.0;
+        }else{
+            return -1.0;
+        }
+    }
+    
+    public double potassioIdeal(int textura_solo){
+        if(textura_solo ==1){
+            return 0.35;
+        }else if(textura_solo==2){
+            return 0.25;
+        }else{
+            return -1.0;
+        }
+    }
+    
+    public double calcioIdeal(int textura_solo){
+        if(textura_solo ==1){
+            return 6.0;
+        }else if(textura_solo==2){
+            return 4.0;
+        }else{
+            return -1.0;
+        }
+    }
+    
+    public double magnesioIdeal(int textura_solo){
+        if(textura_solo ==1){
+            return 1.5;
+        }else if(textura_solo==2){
+            return 1.0;
+        }else{
+            return -1.0;
+        }
+    }
+    
+    public double enxofreIdeal(int textura_solo){
+        if(textura_solo ==1){
+            return 9.0;
+        }else if(textura_solo==2){
+            return 6.0;
+        }else{
+            return -1.0;
+        }
+    }
+    
+    
     //</editor-fold>
 }
