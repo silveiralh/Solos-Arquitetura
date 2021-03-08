@@ -95,57 +95,7 @@ public class Resultado {
     }
     //</editor-fold>
     
-    // <editor-fold defaultstate="collapsed" desc=" Funções para cálculo de valores ideais  ">
-    
-    public double fosforoIdeal(int textura_solo){
-        if(textura_solo ==1){
-            return 9.0;
-        }else if(textura_solo==2){
-            return 12.0;
-        }else{
-            return -1.0;
-        }
-    }
-    
-    public double potassioIdeal(int textura_solo){
-        if(textura_solo ==1){
-            return 0.35;
-        }else if(textura_solo==2){
-            return 0.25;
-        }else{
-            return -1.0;
-        }
-    }
-    
-    public double calcioIdeal(int textura_solo){
-        if(textura_solo ==1){
-            return 6.0;
-        }else if(textura_solo==2){
-            return 4.0;
-        }else{
-            return -1.0;
-        }
-    }
-    
-    public double magnesioIdeal(int textura_solo){
-        if(textura_solo ==1){
-            return 1.5;
-        }else if(textura_solo==2){
-            return 1.0;
-        }else{
-            return -1.0;
-        }
-    }
-    
-    public double enxofreIdeal(int textura_solo){
-        if(textura_solo ==1){
-            return 9.0;
-        }else if(textura_solo==2){
-            return 6.0;
-        }else{
-            return -1.0;
-        }
-    }
+    // <editor-fold defaultstate="collapsed" desc=" Funções para definição dos campos S cmol, CTC cmol, V%  atual, teor de M.O. e Carbono  ">
     
     public double calculoScmol(){
         return (this.potassio +this.calcio+this.magnesio);
