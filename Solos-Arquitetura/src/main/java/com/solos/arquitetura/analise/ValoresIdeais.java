@@ -17,7 +17,7 @@ public class ValoresIdeais {
         if(textura_solo ==1){
             return 9.0;
         }else if(textura_solo==2){
-            return 12.0;
+            return 12.0; 
         }else{
             return -1.0;
         }
