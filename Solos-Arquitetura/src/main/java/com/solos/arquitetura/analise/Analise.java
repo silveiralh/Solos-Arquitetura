@@ -15,12 +15,12 @@ public class Analise {
     private String produtor;
     private Date data;
     private String municipio;
-    private float area_do_talhao;
+    private float areaDoTalhao;
     private int talhao;
-    private int textura_solo;
-    private int sistema_de_cultivo;
-    private String responsável_tecnico;
-    private Resultado resultado_analise;
+    private int texturaSolo;
+    private int sistemaDeCultivo;
+    private String responsávelTecnico;
+    private Resultado resultadoAnalise;
     
     // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
 
@@ -48,12 +48,12 @@ public class Analise {
         this.municipio = municipio;
     }
 
-    public float getArea_do_talhao() {
-        return area_do_talhao;
+    public float getareaDoTalhao() {
+        return areaDoTalhao;
     }
 
-    public void setArea_do_talhao(float area_do_talhao) {
-        this.area_do_talhao = area_do_talhao;
+    public void setareaDoTalhao(float areaDoTalhao) {
+        this.areaDoTalhao = areaDoTalhao;
     }
 
     public int getTalhao() {
@@ -64,36 +64,36 @@ public class Analise {
         this.talhao = talhao;
     }
 
-    public int getTextura_solo() {
-        return textura_solo;
+    public int gettexturaSolo() {
+        return texturaSolo;
     }
 
-    public void setTextura_solo(int textura_solo) {
-        this.textura_solo = textura_solo;
+    public void settexturaSolo(int texturaSolo) {
+        this.texturaSolo = texturaSolo;
     }
 
-    public int getSistema_de_cultivo() {
-        return sistema_de_cultivo;
+    public int getsistemaDeCultivo() {
+        return sistemaDeCultivo;
     }
 
-    public void setSistema_de_cultivo(int sistema_de_cultivo) {
-        this.sistema_de_cultivo = sistema_de_cultivo;
+    public void setsistemaDeCultivo(int sistemaDeCultivo) {
+        this.sistemaDeCultivo = sistemaDeCultivo;
     }
 
-    public String getResponsável_tecnico() {
-        return responsável_tecnico;
+    public String getresponsávelTecnico() {
+        return responsávelTecnico;
     }
 
-    public void setResponsável_tecnico(String responsável_tecnico) {
-        this.responsável_tecnico = responsável_tecnico;
+    public void setresponsávelTecnico(String responsávelTecnico) {
+        this.responsávelTecnico = responsávelTecnico;
     }
 
-   public Resultado getResultado_analise() {
-        return resultado_analise;
+   public Resultado getresultadoAnalise() {
+        return resultadoAnalise;
     }
 
-    public void setResultado_analise(Resultado resultado_analise) {
-        this.resultado_analise = resultado_analise;
+    public void setresultadoAnalise(Resultado resultadoAnalise) {
+        this.resultadoAnalise = resultadoAnalise;
     }
     //</editor-fold>
 

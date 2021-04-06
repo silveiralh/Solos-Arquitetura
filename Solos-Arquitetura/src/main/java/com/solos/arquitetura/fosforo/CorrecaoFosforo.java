@@ -13,26 +13,26 @@ import com.solos.arquitetura.analise.Resultado;
  */
 public class CorrecaoFosforo {
 
-    private double teor_desejado;
-    private int fonte_a_utilizar;
+    private double teorDesejado;
+    private int fonteAUtilizar;
     private double eficiencia;
     private Resultado resultado;
 
     // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
-    public double getTeor_desejado() {
-        return teor_desejado;
+    public double getteorDesejado() {
+        return teorDesejado;
     }
 
-    public void setTeor_desejado(double teor_desejado) {
-        this.teor_desejado = teor_desejado;
+    public void setteorDesejado(double teorDesejado) {
+        this.teorDesejado = teorDesejado;
     }
 
-    public double getFonte_a_utilizar() {
-        return fonte_a_utilizar;
+    public double getfonteAUtilizar() {
+        return fonteAUtilizar;
     }
 
-    public void setFonte_a_utilizar(int fonte_a_utilizar) {
-        this.fonte_a_utilizar = fonte_a_utilizar;
+    public void setfonteAUtilizar(int fonteAUtilizar) {
+        this.fonteAUtilizar = fonteAUtilizar;
     }
 
     public double getEficiencia() {
@@ -46,7 +46,7 @@ public class CorrecaoFosforo {
 
     // <editor-fold defaultstate="collapsed" desc=" Quantidade a aplicar, Fonte de fosforo a utilizar, Custo  ">
     public String fonteDeFosforo() {
-        switch (this.fonte_a_utilizar) {
+        switch (this.fonteAUtilizar) {
             case (1):
                 return "Superfosfato Simples";
             case (2):
@@ -79,7 +79,7 @@ public class CorrecaoFosforo {
 
     public double valorFonteFosforo() {
 
-        switch (this.fonte_a_utilizar) {
+        switch (this.fonteAUtilizar) {
             case (1):
                 return 18.0;
             case (2):
@@ -110,11 +110,11 @@ public class CorrecaoFosforo {
     }
 
     public double quantidadeParaAplicar() {
-        return ((this.teor_desejado - this.resultado.getFosforo()) * 2 * 2.29 * 100 / this.eficiencia / 100) * (100 / this.valorFonteFosforo());
+        return ((this.teorDesejado - this.resultado.getFosforo()) * 2 * 2.29 * 100 / this.eficiencia / 100) * (100 / this.valorFonteFosforo());
     }
 
     public String campoCorrecaoFosforo1() {
-        switch (this.fonte_a_utilizar) {
+        switch (this.fonteAUtilizar) {
             case 1:
                 return this.quantidadeParaAplicar()*0.1 + "- Enxofre";
             case 5:
@@ -128,7 +128,7 @@ public class CorrecaoFosforo {
     }
     
     public String campoCorrecaoFosforo2(){
-        switch (this.fonte_a_utilizar) {
+        switch (this.fonteAUtilizar) {
             case (1):
                 return this.quantidadeParaAplicar()*0.28 + "- Calcio";
             case (2):

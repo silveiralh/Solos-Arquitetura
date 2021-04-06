@@ -17,7 +17,7 @@ public class Resultado {
     private double magnesio;
     private double enxofre;
     private double aluminio;
-    private double hidrogenio_aluminio;
+    private double hidrogenioAluminio;
     private double MO;
     
     // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
@@ -78,12 +78,12 @@ public class Resultado {
         this.aluminio = aluminio;
     }
     
-     public double getHidrogenio_aluminio() {
-        return hidrogenio_aluminio;
+     public double gethidrogenioAluminio() {
+        return hidrogenioAluminio;
     }
 
-    public void setHidrogenio_aluminio(double hidrogenio_aluminio) {
-        this.hidrogenio_aluminio = hidrogenio_aluminio;
+    public void sethidrogenioAluminio(double hidrogenioAluminio) {
+        this.hidrogenioAluminio = hidrogenioAluminio;
     }
     
     public double getMO() {
@@ -102,7 +102,7 @@ public class Resultado {
     }
     
     public double calculoCTCmol(){
-        return (calculoScmol()+this.hidrogenio_aluminio);
+        return (calculoScmol()+this.hidrogenioAluminio);
     }
     
     public double calculoVAtual(){

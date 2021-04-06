@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.solos.arquitetura.potassioo;
+package com.solos.arquitetura.potassio;
 
 import com.solos.arquitetura.analise.Resultado;
 
@@ -13,7 +13,7 @@ import com.solos.arquitetura.analise.Resultado;
  */
 public class CorrecaoPotassio {
     private double participacao_CTC_desejada;
-    private int fonte_a_usar;
+    private int fonteAUsar;
     private Resultado resultado;
     
     // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
@@ -26,18 +26,18 @@ public class CorrecaoPotassio {
         this.participacao_CTC_desejada = participacao_CTC_desejada;
     }
 
-    public double getFonte_a_usar() {
-        return fonte_a_usar;
+    public double getfonteAUsar() {
+        return fonteAUsar;
     }
 
-    public void setFonte_a_usar(int fonte_a_usar) {
-        this.fonte_a_usar = fonte_a_usar;
+    public void setfonteAUsar(int fonteAUsar) {
+        this.fonteAUsar = fonteAUsar;
     }
     //</editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc=" Metodos correção potássio  ">
     public String fontePotassioAUsar() {
-        switch (this.fonte_a_usar) {
+        switch (this.fonteAUsar) {
             case (1):
                 return "Cloreto de Potassio";
             case (2):
@@ -50,11 +50,11 @@ public class CorrecaoPotassio {
     }
     
     public double participacaoPotassioCTCAtual() {
-        return this.resultado.getPotassio()/(this.resultado.getCalcio()+this.resultado.getMagnesio()+this.resultado.getPotassio()+this.resultado.getHidrogenio_aluminio())*100;
+        return this.resultado.getPotassio()/(this.resultado.getCalcio()+this.resultado.getMagnesio()+this.resultado.getPotassio()+this.resultado.gethidrogenioAluminio())*100;
     }
     
     public int fontePotassio() {
-        switch(this.fonte_a_usar){
+        switch(this.fonteAUsar){
             case (1):
                 return 58;
             case (2):

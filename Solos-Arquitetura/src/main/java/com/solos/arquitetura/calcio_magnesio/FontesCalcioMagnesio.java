@@ -10,60 +10,60 @@ package com.solos.arquitetura.calcio_magnesio;
  * @author Rique
  */
 public class FontesCalcioMagnesio {
-    private double calcario_dolomitico;
-    private double calcario_calcitico;
-    private double calcario_de_concha;
-    private double gesso_agricola;
-    private double hidroxido_de_calcio;
-    private double calcario_magnesiano;
+    private double calcarioDolomitico;
+    private double calcarioCalcitico;
+    private double calcarioDeConcha;
+    private double gessoAgricola;
+    private double hidroxidoDeCalcio;
+    private double calcarioMagnesiano;
 
     // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
-    public double getCalcario_dolomitico() {
-        return calcario_dolomitico;
+    public double getcalcarioDolomitico() {
+        return calcarioDolomitico;
     }
 
-    public void setCalcario_dolomitico(double calcario_dolomitico) {
-        this.calcario_dolomitico = calcario_dolomitico;
+    public void setcalcarioDolomitico(double calcarioDolomitico) {
+        this.calcarioDolomitico = calcarioDolomitico;
     }
 
-    public double getCalcario_calcitico() {
-        return calcario_calcitico;
+    public double getcalcarioCalcitico() {
+        return calcarioCalcitico;
     }
 
-    public void setCalcario_calcitico(double calcario_calcitico) {
-        this.calcario_calcitico = calcario_calcitico;
+    public void setcalcarioCalcitico(double calcarioCalcitico) {
+        this.calcarioCalcitico = calcarioCalcitico;
     }
 
-    public double getCalcario_de_concha() {
-        return calcario_de_concha;
+    public double getcalcarioDeConcha() {
+        return calcarioDeConcha;
     }
 
-    public void setCalcario_de_concha(double calcario_de_concha) {
-        this.calcario_de_concha = calcario_de_concha;
+    public void setcalcarioDeConcha(double calcarioDeConcha) {
+        this.calcarioDeConcha = calcarioDeConcha;
     }
 
-    public double getGesso_agricola() {
-        return gesso_agricola;
+    public double getgessoAgricola() {
+        return gessoAgricola;
     }
 
-    public void setGesso_agricola(double gesso_agricola) {
-        this.gesso_agricola = gesso_agricola;
+    public void setgessoAgricola(double gessoAgricola) {
+        this.gessoAgricola = gessoAgricola;
     }
 
-    public double getHidroxido_de_calcio() {
-        return hidroxido_de_calcio;
+    public double gethidroxidoDeCalcio() {
+        return hidroxidoDeCalcio;
     }
 
-    public void setHidroxido_de_calcio(double hidroxido_de_calcio) {
-        this.hidroxido_de_calcio = hidroxido_de_calcio;
+    public void sethidroxidoDeCalcio(double hidroxidoDeCalcio) {
+        this.hidroxidoDeCalcio = hidroxidoDeCalcio;
     }
 
-    public double getCalcario_magnesiano() {
-        return calcario_magnesiano;
+    public double getcalcarioMagnesiano() {
+        return calcarioMagnesiano;
     }
 
-    public void setCalcario_magnesiano(double calcario_magnesiano) {
-        this.calcario_magnesiano = calcario_magnesiano;
+    public void setcalcarioMagnesiano(double calcarioMagnesiano) {
+        this.calcarioMagnesiano = calcarioMagnesiano;
     }
      // </editor-fold>
 }
