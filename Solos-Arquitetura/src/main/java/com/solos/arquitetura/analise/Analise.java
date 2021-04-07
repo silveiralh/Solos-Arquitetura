@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.solos.arquitetura.analise;
-
+import com.solos.arquitetura.analise.Resultado;
 import java.util.Date;
 
 /**

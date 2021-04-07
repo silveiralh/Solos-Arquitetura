@@ -9,37 +9,8 @@ package com.solos.arquitetura.potassio;
  *
  * @author Rique
  */
-public class FontesPotassio {
-
-    private double cloretoDePotassio;
-    private double sulfatoDePotassio;
-    private double sulfatoDePotassioMag;
-
-    // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
-
-    public double getcloretoDePotassio() {
-        return cloretoDePotassio;
-    }
-
-    public void setcloretoDePotassio(double cloretoDePotassio) {
-        this.cloretoDePotassio = cloretoDePotassio;
-    }
-
-    public double getsulfatoDePotassio() {
-        return sulfatoDePotassio;
-    }
-
-    public void setsulfatoDePotassio(double sulfatoDePotassio) {
-        this.sulfatoDePotassio = sulfatoDePotassio;
-    }
-
-    public double getsulfatoDePotassioMag() {
-        return sulfatoDePotassioMag;
-    }
-
-    public void setsulfatoDePotassioMag(double sulfatoDePotassioMag) {
-        this.sulfatoDePotassioMag = sulfatoDePotassioMag;
-    }
-    // </editor-fold>
-
+public enum FontesPotassio {
+    CLORETO_DE_POTASSIO,
+    SULFATO_DE_POTASSIO,
+    SULFATO_POTASSIO_MAGNESIO;
 }

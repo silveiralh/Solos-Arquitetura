@@ -14,9 +14,16 @@ import com.solos.arquitetura.analise.Resultado;
 public class CorrecaoFosforo {
 
     private double teorDesejado;
-    private int fonteAUtilizar;
+    private FontesFosforo fonteAUtilizar;
     private double eficiencia;
     private Resultado resultado;
+    
+    public CorrecaoFosforo( double teorDesejado, FontesFosforo fonteAUtilizar, double eficiencia, Resultado resultado) {
+        this.teorDesejado = teorDesejado;
+        this.fonteAUtilizar = fonteAUtilizar;
+        this.eficiencia = eficiencia;
+        this.resultado = resultado;
+    }
 
     // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
     public double getteorDesejado() {
@@ -27,11 +34,11 @@ public class CorrecaoFosforo {
         this.teorDesejado = teorDesejado;
     }
 
-    public double getfonteAUtilizar() {
+    public FontesFosforo getfonteAUtilizar() {
         return fonteAUtilizar;
     }
 
-    public void setfonteAUtilizar(int fonteAUtilizar) {
+    public void setfonteAUtilizar(FontesFosforo fonteAUtilizar) {
         this.fonteAUtilizar = fonteAUtilizar;
     }
 
@@ -45,64 +52,32 @@ public class CorrecaoFosforo {
     //</editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc=" Quantidade a aplicar, Fonte de fosforo a utilizar, Custo  ">
-    public String fonteDeFosforo() {
-        switch (this.fonteAUtilizar) {
-            case (1):
-                return "Superfosfato Simples";
-            case (2):
-                return "Superfosfato Triplo";
-            case (3):
-                return "MAP";
-            case (4):
-                return "DAP";
-            case (5):
-                return "Termofosfato Yoorin";
-            case (6):
-                return "Fosfato Reat. Arad";
-            case (7):
-                return "Fosfato  Gafsa";
-            case (8):
-                return "Fosfato  Daoui";
-            case (9):
-                return "Fosf.  Patos Minas";
-            case (10):
-                return "Escória de Thomas";
-            case (11):
-                return "Ácido Fosfórico ";
-            case (12):
-                return "Multif.Magnesiano";
-            default:
-                return "";
-
-        }
-    }
-
     public double valorFonteFosforo() {
 
-        switch (this.fonteAUtilizar) {
-            case (1):
+        switch(this.fonteAUtilizar){
+            case SUPERFOSFATO_SIMPLES:
                 return 18.0;
-            case (2):
+            case SUPERFOSFATO_TRIPLO:
                 return 41.0;
-            case (3):
+            case MAP:
                 return 48.0;
-            case (4):
+            case DAP:
                 return 45.0;
-            case (5):
+            case YOORIN:
                 return 18.0;
-            case (6):
+            case FOSFATO_ARAD:
                 return 33.0;
-            case (7):
+            case FOSFATO_GAFSA:
                 return 29.0;
-            case (8):
+            case FOSFATO_DAOUI:
                 return 32.0;
-            case (9):
+            case FOSFATO_PATO_MINAS:
                 return 24.0;
-            case (10):
+            case ESCORIA_DE_THOMAS:
                 return 18.5;
-            case (11):
+            case ACIDO_FOSFORICO:
                 return 52.0;
-            case (12):
+            case MULTIF_MAGNESIANO:
                 return 18.0;
             default:
                 return 0.0;
@@ -113,51 +88,40 @@ public class CorrecaoFosforo {
         return ((this.teorDesejado - this.resultado.getFosforo()) * 2 * 2.29 * 100 / this.eficiencia / 100) * (100 / this.valorFonteFosforo());
     }
 
-    public String campoCorrecaoFosforo1() {
+    public String campoCorrecaoFosforo(){
         switch (this.fonteAUtilizar) {
-            case 1:
-                return this.quantidadeParaAplicar()*0.1 + "- Enxofre";
-            case 5:
-                return this.quantidadeParaAplicar() * 0.15 + "- Magnésio";
-            case 12:
-                return this.quantidadeParaAplicar() * 0.11 + "- Enxofre";
-            default:
-                return "";
-        }
-
-    }
-    
-    public String campoCorrecaoFosforo2(){
-        switch (this.fonteAUtilizar) {
-            case (1):
-                return this.quantidadeParaAplicar()*0.28 + "- Calcio";
-            case (2):
+            case SUPERFOSFATO_SIMPLES:
+                return this.quantidadeParaAplicar()*0.28 + "- Calcio - " + this.quantidadeParaAplicar()*0.1 + "- Enxofre";
+            case SUPERFOSFATO_TRIPLO:
                 return this.quantidadeParaAplicar()*0.2 + "- Calcio";
-            case (3):
+            case MAP:
                 return this.quantidadeParaAplicar()*0.09 + "- Nitrogenio";
-            case (4):
+            case DAP:
                 return this.quantidadeParaAplicar()*0.16 + "- Nitrogenio";
-            case (5):
-                return this.quantidadeParaAplicar()*0.28 + "- Calcio";
-            case (6):
+            case YOORIN:
+                return this.quantidadeParaAplicar()*0.28 + "- Calcio - "+ this.quantidadeParaAplicar() * 0.15 + "- Magnésio";
+            case FOSFATO_ARAD:
                 return this.quantidadeParaAplicar()*0.52 + "- Calcio";
-            case (7):
+            case FOSFATO_GAFSA:
                 return this.quantidadeParaAplicar()*0.52 + "- Calcio";
-            case (8):
+            case FOSFATO_DAOUI:
                 return this.quantidadeParaAplicar()*0.45 + "- Calcio";
-            case (9):
+            case FOSFATO_PATO_MINAS:
                 return this.quantidadeParaAplicar()*0.28 + "- Calcio";
-            case (10):
+            case ESCORIA_DE_THOMAS:
                 return this.quantidadeParaAplicar()*0.44 + "- Calcio";
-            case (11):
+            case ACIDO_FOSFORICO:
                 return this.quantidadeParaAplicar()*0.0 + "- Calcio";
-            case (12):
-                return this.quantidadeParaAplicar()*0.18 + "- Calcio";
+            case MULTIF_MAGNESIANO:
+                return this.quantidadeParaAplicar()*0.18 + "- Calcio - " + this.quantidadeParaAplicar() * 0.11 + "- Enxofre";
             default:
                 return "";
         }
     }
     
+    double custo() {
+        return valorFonteFosforo() * this.quantidadeParaAplicar()/1000;
+    }
      //</editor-fold>
 
 }
