@@ -21,30 +21,10 @@ public class CorrecaoPotassio{
         this.fonteAUsar = fonteAUsar;
         this.resultado = resultado;
     }
-    
-    // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
-
-    public double getparticipacaoCTCDesejada() {
-        return participacaoCTCDesejada;
-    }
-
-    public void setparticipacaoCTCDesejada(double participacaoCTCDesejada) {
-        this.participacaoCTCDesejada = participacaoCTCDesejada;
-    }
-
-    public FontesPotassio getfonteAUsar() {
-        return fonteAUsar;
-    }
-
-    public void setfonteAUsar(FontesPotassio fonteAUsar) {
-        this.fonteAUsar = fonteAUsar;
-    }
-    //</editor-fold>
-
     // <editor-fold defaultstate="collapsed" desc=" Metodos correção potássio  ">
     
     public double participacaoPotassioCTCAtual() {
-        return this.resultado.getPotassio()/(this.resultado.getCalcio()+this.resultado.getMagnesio()+this.resultado.getPotassio()+this.resultado.gethidrogenioAluminio())*100;
+        return this.resultado.getPotassio()/(this.resultado.getCalcio()+this.resultado.getMagnesio()+this.resultado.getPotassio()+this.resultado.getHidrogenioAluminio())*100;
     }
     
     public int valorFontePotassio() {

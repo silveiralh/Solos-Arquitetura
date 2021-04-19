@@ -19,81 +19,26 @@ public class Resultado {
     private double aluminio;
     private double hidrogenioAluminio;
     private double MO;
-    
-    // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
-
-    public int getNumero_analise() {
-        return numero_analise;
-    }
-
-    public void setNumero_analise(int numero_analise) {
-        this.numero_analise = numero_analise;
-    }
-
-    public double getFosforo() {
-        return fosforo;
-    }
-
-    public void setFosforo(double fosforo) {
-        this.fosforo = fosforo;
-    }
-
-    public double getPotassio() {
-        return potassio;
-    }
-
-    public void setPotassio(double potassio) {
-        this.potassio = potassio;
-    }
 
     public double getCalcio() {
         return calcio;
-    }
-
-    public void setCalcio(double calcio) {
-        this.calcio = calcio;
     }
 
     public double getMagnesio() {
         return magnesio;
     }
 
-    public void setMagnesio(double magnesio) {
-        this.magnesio = magnesio;
-    }
-
-    public double getEnxofre() {
-        return enxofre;
-    }
-
-    public void setEnxofre(double enxofre) {
-        this.enxofre = enxofre;
-    }
-
-    public double getAluminio() {
-        return aluminio;
-    }
-
-    public void setAluminio(double aluminio) {
-        this.aluminio = aluminio;
-    }
-    
-     public double gethidrogenioAluminio() {
+    public double getHidrogenioAluminio() {
         return hidrogenioAluminio;
     }
 
-    public void sethidrogenioAluminio(double hidrogenioAluminio) {
-        this.hidrogenioAluminio = hidrogenioAluminio;
-    }
-    
-    public double getMO() {
-        return MO;
+    public double getFosforo() {
+        return fosforo;
     }
 
-    public void setMO(double MO) {
-        this.MO = MO;
+    public double getPotassio() {
+        return potassio;
     }
-    //</editor-fold>
     
     // <editor-fold defaultstate="collapsed" desc=" Funções para definição dos campos S cmol, CTC cmol, V%  atual, teor de M.O. e Carbono  ">
     

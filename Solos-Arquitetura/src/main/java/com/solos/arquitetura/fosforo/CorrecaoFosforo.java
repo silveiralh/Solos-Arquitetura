@@ -24,33 +24,6 @@ public class CorrecaoFosforo {
         this.eficiencia = eficiencia;
         this.resultado = resultado;
     }
-
-    // <editor-fold defaultstate="collapsed" desc=" Getters & Setters ">
-    public double getteorDesejado() {
-        return teorDesejado;
-    }
-
-    public void setteorDesejado(double teorDesejado) {
-        this.teorDesejado = teorDesejado;
-    }
-
-    public FontesFosforo getfonteAUtilizar() {
-        return fonteAUtilizar;
-    }
-
-    public void setfonteAUtilizar(FontesFosforo fonteAUtilizar) {
-        this.fonteAUtilizar = fonteAUtilizar;
-    }
-
-    public double getEficiencia() {
-        return eficiencia;
-    }
-
-    public void setEficiencia(double eficiencia) {
-        this.eficiencia = eficiencia;
-    }
-    //</editor-fold>
-
     // <editor-fold defaultstate="collapsed" desc=" Quantidade a aplicar, Fonte de fosforo a utilizar, Custo  ">
     public double valorFonteFosforo() {
 
