@@ -1,18 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.solos.arquitetura.analise;
 
-/**
- *
- * @author Rique
- */
 public class ValoresIdeais {
-    
-    // <editor-fold defaultstate="collapsed" desc=" Funções para cálculo de valores ideais  ">
-     
+  
     public double fosforoIdeal(int texturaSolo){
         if(texturaSolo ==1){
             return 9.0;
@@ -62,5 +51,4 @@ public class ValoresIdeais {
             return -1.0;
         }
     }
-     //</editor-fold>
 }

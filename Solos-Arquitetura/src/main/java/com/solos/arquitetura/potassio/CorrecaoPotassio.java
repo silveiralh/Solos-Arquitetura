@@ -7,10 +7,6 @@ package com.solos.arquitetura.potassio;
 
 import com.solos.arquitetura.analise.Resultado;
 
-/**
- *
- * @author Rique
- */
 public class CorrecaoPotassio{
     private double participacaoCTCDesejada;
     private FontesPotassio fonteAUtilizar;
@@ -21,8 +17,7 @@ public class CorrecaoPotassio{
         this.fonteAUtilizar = fonteAUsar;
         this.resultado = resultado;
     }
-    // <editor-fold defaultstate="collapsed" desc=" Metodos correção potássio  ">
-    
+
     public double participacaoPotassioCTCAtual() {
         return this.resultado.getPotassio()/(this.resultado.getCalcio()+this.resultado.getMagnesio()+this.resultado.getPotassio()+this.resultado.getHidrogenioAluminio())*100;
     }
@@ -51,7 +46,5 @@ public class CorrecaoPotassio{
     double custo() {
         return this.fonteAUtilizar.getValorFontePotassio()*this.quantidadeParaAplicar()/1000;
     }
-    
-    //</editor-fold>
-    
+
 }

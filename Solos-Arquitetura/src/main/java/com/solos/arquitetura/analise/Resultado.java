@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.solos.arquitetura.analise;
 
-/**
- *
- * @author Rique
- */
 public class Resultado {
     private int numero_analise;
     private double fosforo;
@@ -39,9 +30,7 @@ public class Resultado {
     public double getPotassio() {
         return potassio;
     }
-    
-    // <editor-fold defaultstate="collapsed" desc=" Funções para definição dos campos S cmol, CTC cmol, V%  atual, teor de M.O. e Carbono  ">
-    
+
     public double calculoScmol(){
         return (this.potassio +this.calcio+this.magnesio);
     }
@@ -61,6 +50,5 @@ public class Resultado {
     public double calculoCarbono(){
         return(calculoTeorMO()/(1.72*10));
     }
-    
-    //</editor-fold>
+
 }

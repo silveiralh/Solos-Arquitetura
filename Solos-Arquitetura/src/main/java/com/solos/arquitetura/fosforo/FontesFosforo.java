@@ -1,14 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.solos.arquitetura.fosforo;
-
-/**
- *
- * @author Rique
- */
 
 public enum FontesFosforo {
     SUPERFOSFATO_SIMPLES(18.0,0.28,"CÁLCIO",0.1,"Enxofre"),
@@ -56,6 +46,5 @@ public enum FontesFosforo {
         this.campoCorrecaoDois = campoCorrecaoDois;
         this.campoCorrecaoTres = campoCorrecaoTres;
         this.campoCorrecaoQuatro = campoCorrecaoQuatro;
-    }
-    
+    }   
 }
