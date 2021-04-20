@@ -31,34 +31,7 @@ public class CorrecaoFosforo {
     }
 
     public String campoCorrecaoFosforo(){
-        switch (this.fonteAUtilizar) {
-            case SUPERFOSFATO_SIMPLES:
-                return this.quantidadeParaAplicar()*0.28 + "- Calcio - " + this.quantidadeParaAplicar()*0.1 + "- Enxofre";
-            case SUPERFOSFATO_TRIPLO:
-                return this.quantidadeParaAplicar()*0.2 + "- Calcio";
-            case MAP:
-                return this.quantidadeParaAplicar()*0.09 + "- Nitrogenio";
-            case DAP:
-                return this.quantidadeParaAplicar()*0.16 + "- Nitrogenio";
-            case YOORIN:
-                return this.quantidadeParaAplicar()*0.28 + "- Calcio - "+ this.quantidadeParaAplicar() * 0.15 + "- Magnésio";
-            case FOSFATO_ARAD:
-                return this.quantidadeParaAplicar()*0.52 + "- Calcio";
-            case FOSFATO_GAFSA:
-                return this.quantidadeParaAplicar()*0.52 + "- Calcio";
-            case FOSFATO_DAOUI:
-                return this.quantidadeParaAplicar()*0.45 + "- Calcio";
-            case FOSFATO_PATO_MINAS:
-                return this.quantidadeParaAplicar()*0.28 + "- Calcio";
-            case ESCORIA_DE_THOMAS:
-                return this.quantidadeParaAplicar()*0.44 + "- Calcio";
-            case ACIDO_FOSFORICO:
-                return this.quantidadeParaAplicar()*0.0 + "- Calcio";
-            case MULTIF_MAGNESIANO:
-                return this.quantidadeParaAplicar()*0.18 + "- Calcio - " + this.quantidadeParaAplicar() * 0.11 + "- Enxofre";
-            default:
-                return "";
-        }
+        return this.quantidadeParaAplicar()*this.fonteAUtilizar.getCampoCorrecaoUm()+ " - " + this.fonteAUtilizar.getCampoCorrecaoDois() + " - " + quantidadeParaAplicar()* this.fonteAUtilizar.getCampoCorrecaoTres() + " - "+this.fonteAUtilizar.getCampoCorrecaoQuatro();
     }
     
     double custo() {
