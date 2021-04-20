@@ -11,16 +11,27 @@ package com.solos.arquitetura.fosforo;
  */
 
 public enum FontesFosforo {
-    SUPERFOSFATO_SIMPLES,
-    SUPERFOSFATO_TRIPLO,
-    MAP,
-    DAP,
-    YOORIN,
-    FOSFATO_ARAD,
-    FOSFATO_GAFSA,
-    FOSFATO_DAOUI,
-    FOSFATO_PATO_MINAS,
-    ESCORIA_DE_THOMAS,
-    ACIDO_FOSFORICO,
-    MULTIF_MAGNESIANO;
+    SUPERFOSFATO_SIMPLES(18.0),
+    SUPERFOSFATO_TRIPLO(41.0),
+    MAP(48.0),
+    DAP(45.0),
+    YOORIN(18.0),
+    FOSFATO_ARAD(33.0),
+    FOSFATO_GAFSA(29.0),
+    FOSFATO_DAOUI(32.0),
+    FOSFATO_PATO_MINAS(24.0),
+    ESCORIA_DE_THOMAS(18.5),
+    ACIDO_FOSFORICO(52.0),
+    MULTIF_MAGNESIANO(18.0);
+    
+    private final double valorFonteFosforo;
+
+    public double getValorFonteFosforo() {
+        return valorFonteFosforo;
+    }
+    
+    FontesFosforo(double valorFonteFosforo){
+        this.valorFonteFosforo = valorFonteFosforo;
+    }
+    
 }

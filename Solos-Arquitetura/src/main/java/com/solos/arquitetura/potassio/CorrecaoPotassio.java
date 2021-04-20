@@ -27,19 +27,6 @@ public class CorrecaoPotassio{
         return this.resultado.getPotassio()/(this.resultado.getCalcio()+this.resultado.getMagnesio()+this.resultado.getPotassio()+this.resultado.getHidrogenioAluminio())*100;
     }
     
-    public int valorFontePotassio() {
-        switch(this.fonteAUsar){
-            case CLORETO_DE_POTASSIO:
-                return 58;
-            case SULFATO_DE_POTASSIO:
-                return 52;
-            case SULFATO_POTASSIO_MAGNESIO:
-                return 22;
-            default:
-                return 0;
-        }
-    }
-    
     double participacaoPotassioAposCorrecao() {
         if(this.participacaoCTCDesejada> 0.001){
             return this.participacaoCTCDesejada;
@@ -54,7 +41,7 @@ public class CorrecaoPotassio{
     }
     
     public double quantidadeAplicar() {
-        return (this.resultado.getPotassio()*this.participacaoCTCDesejada/this.participacaoPotassioCTCAtual()) - this.resultado.getPotassio()*391*2*1.2*100/0.85/valorFontePotassio();
+        return (this.resultado.getPotassio()*this.participacaoCTCDesejada/this.participacaoPotassioCTCAtual()) - this.resultado.getPotassio()*391*2*1.2*100/0.85/this.fonteAUsar.getValorFontePotassio();
     }
     
     public String campoCorrecaoPotassio(){
@@ -71,7 +58,7 @@ public class CorrecaoPotassio{
     }
     
     double custo() {
-        return valorFontePotassio()*this.quantidadeAplicar()/1000;
+        return this.fonteAUsar.getValorFontePotassio()*this.quantidadeAplicar()/1000;
     }
     
     //</editor-fold>
