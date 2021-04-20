@@ -51,7 +51,7 @@ Estruturas condicionais no código: ***5***
   - Estas melhorias foram feitas em 3 *commits*, pois ao longo da implementação foram observadas outras formas de mehorar a estrutura do código tornando-o mais simples.
   - Link para os *commits* da proposta de solução: [*Commit 1*](https://github.com/silveiralh/Solos-Arquitetura/commit/46cb070206ab46774c49dc96c8c659e48b2826ad), [*Commit 2*](https://github.com/silveiralh/Solos-Arquitetura/commit/6b60a6101a051336457d1cf1e426b30e96be85e3), [*Commit 3*](https://github.com/silveiralh/Solos-Arquitetura/commit/0f37815a5321b00d3490c73a75468150c47cc4f3).
 
-## Código antes das melhorias
+## Código depois das melhorias
 
 ### Resultado da execução do `cloc`:
 
