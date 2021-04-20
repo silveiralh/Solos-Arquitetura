@@ -25,40 +25,9 @@ public class CorrecaoFosforo {
         this.resultado = resultado;
     }
     // <editor-fold defaultstate="collapsed" desc=" Quantidade a aplicar, Fonte de fosforo a utilizar, Custo  ">
-    public double valorFonteFosforo() {
-
-        switch(this.fonteAUtilizar){
-            case SUPERFOSFATO_SIMPLES:
-                return 18.0;
-            case SUPERFOSFATO_TRIPLO:
-                return 41.0;
-            case MAP:
-                return 48.0;
-            case DAP:
-                return 45.0;
-            case YOORIN:
-                return 18.0;
-            case FOSFATO_ARAD:
-                return 33.0;
-            case FOSFATO_GAFSA:
-                return 29.0;
-            case FOSFATO_DAOUI:
-                return 32.0;
-            case FOSFATO_PATO_MINAS:
-                return 24.0;
-            case ESCORIA_DE_THOMAS:
-                return 18.5;
-            case ACIDO_FOSFORICO:
-                return 52.0;
-            case MULTIF_MAGNESIANO:
-                return 18.0;
-            default:
-                return 0.0;
-        }
-    }
 
     public double quantidadeParaAplicar() {
-        return ((this.teorDesejado - this.resultado.getFosforo()) * 2 * 2.29 * 100 / this.eficiencia / 100) * (100 / this.valorFonteFosforo());
+        return ((this.teorDesejado - this.resultado.getFosforo()) * 2 * 2.29 * 100 / this.eficiencia / 100) * (100 / this.fonteAUtilizar.getValorFonteFosforo());
     }
 
     public String campoCorrecaoFosforo(){
@@ -93,7 +62,7 @@ public class CorrecaoFosforo {
     }
     
     double custo() {
-        return valorFonteFosforo() * this.quantidadeParaAplicar()/1000;
+        return this.fonteAUtilizar.getValorFonteFosforo() * this.quantidadeParaAplicar()/1000;
     }
      //</editor-fold>
 
