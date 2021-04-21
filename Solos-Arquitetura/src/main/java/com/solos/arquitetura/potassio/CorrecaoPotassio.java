@@ -36,11 +36,27 @@ public class CorrecaoPotassio{
     }
     
     public double quantidadeParaAplicar() {
-        return (this.resultado.getPotassio()*this.participacaoCTCDesejada/this.participacaoPotassioCTCAtual()) - this.resultado.getPotassio()*391*2*1.2*100/0.85/this.fonteAUtilizar.getValorFontePotassio();
+        if((this.resultado.getPotassio()*this.participacaoCTCDesejada/this.participacaoPotassioCTCAtual()) - this.resultado.getPotassio() > 0.01){
+            return (this.resultado.getPotassio()*this.participacaoCTCDesejada/this.participacaoPotassioCTCAtual()) - this.resultado.getPotassio()*391*2*1.2*100/0.85/this.fonteAUtilizar.getValorFontePotassio();
+        }else{
+            return 0.00;
+        }
+    }
+  
+    public double campoCorrecaoUm(){
+        return this.quantidadeParaAplicar()*this.fonteAUtilizar.getCampoCorrecaoUm();
     }
     
-    public String campoCorrecaoPotassio(){
-        return this.quantidadeParaAplicar()*this.fonteAUtilizar.getCampoCorrecaoUm()+ " - " + this.fonteAUtilizar.getCampoCorrecaoDois() + " - " + quantidadeParaAplicar()* this.fonteAUtilizar.getCampoCorrecaoTres() + " - "+this.fonteAUtilizar.getCampoCorrecaoQuatro();
+    public String campoCorrecaoDois(){
+        return this.fonteAUtilizar.getCampoCorrecaoDois();
+    }
+    
+    public double campoCorrecaoTres(){
+        return quantidadeParaAplicar()* this.fonteAUtilizar.getCampoCorrecaoTres();
+    }
+    
+    public String campoCorrecaoQuatro(){
+        return this.fonteAUtilizar.getCampoCorrecaoQuatro();
     }
     
     double custo() {

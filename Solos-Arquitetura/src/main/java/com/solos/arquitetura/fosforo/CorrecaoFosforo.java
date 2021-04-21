@@ -17,11 +17,27 @@ public class CorrecaoFosforo {
     }
 
     public double quantidadeParaAplicar() {
-        return ((this.teorDesejado - this.resultado.getFosforo()) * 2 * 2.29 * 100 / this.eficiencia / 100) * (100 / this.fonteAUtilizar.getValorFonteFosforo());
+        if(this.teorDesejado - this.resultado.getFosforo()>0.01){
+            return ((this.teorDesejado - this.resultado.getFosforo()) * 2 * 2.29 * 100 / this.eficiencia) * 100/ this.fonteAUtilizar.getValorFonteFosforo();
+        }else{
+            return 0.00;
+        }
     }
-
-    public String campoCorrecaoFosforo(){
-        return this.quantidadeParaAplicar()*this.fonteAUtilizar.getCampoCorrecaoUm()+ " - " + this.fonteAUtilizar.getCampoCorrecaoDois() + " - " + quantidadeParaAplicar()* this.fonteAUtilizar.getCampoCorrecaoTres() + " - "+this.fonteAUtilizar.getCampoCorrecaoQuatro();
+    
+    public double campoCorrecaoUm(){
+        return this.quantidadeParaAplicar()*this.fonteAUtilizar.getCampoCorrecaoUm();
+    }
+    
+    public String campoCorrecaoDois(){
+        return this.fonteAUtilizar.getCampoCorrecaoDois();
+    }
+    
+    public double campoCorrecaoTres(){
+        return quantidadeParaAplicar()* this.fonteAUtilizar.getCampoCorrecaoTres();
+    }
+    
+    public String campoCorrecaoQuatro(){
+        return this.fonteAUtilizar.getCampoCorrecaoQuatro();
     }
     
     double custo() {
